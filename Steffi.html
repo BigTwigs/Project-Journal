@@ -249,7 +249,7 @@
                             </div>
                         </div>
                         <div class="journal-entry">
-                            <p class="date"><em>Week 10: 27/003/2020</em></p>
+                            <p class="date"><em>Week 10: 27/03/2020</em></p>
                             <div class="note">
                                 <p>Learning to Code for the Arduino Uno</p>
                                 <p>Learnt about coding for the Arduino and that the mircocontroller does not stop executing whatever code is 
@@ -260,11 +260,13 @@
                                     1) Used linear equation from DFRobot website for the turbidity sensor to convert the analog voltage read to NTU <br>
                                     2) Had to play with the trimmer on the sensor in order to get a stable reading from the sensor when it is inside the 
                                     plastic coating and one high enough to be read as high through the analog input pins on the Arduino uno <br>
-                                        See: <a href="https://www.teachmemicro.com/arduino-turbidity-sensor/">https://www.teachmemicro.com/arduino-turbidity-sensor/</a><br>
+                                    See: <a href="https://www.teachmemicro.com/arduino-turbidity-sensor/">https://www.teachmemicro.com/arduino-turbidity-sensor/</a> <br>
                                     3) Adjusted linear equation to show the relationship between NTU and Voltage to reflect the reality of the sensor <br>
                                     See: <a href="https://wiki.dfrobot.com/Turbidity_sensor_SKU__SEN0189">https://wiki.dfrobot.com/Turbidity_sensor_SKU__SEN0189</a> <br><br>
                                     Planning and filming for the mid-course video presentation was done. Could not show much implementation as all the sensors
-                                    only arrived last week. 
+                                    only arrived last week. While discussing project progress with Project Supervisor, the original API design to attempt to
+                                    control the sensors was discarded due to the mircocontroller constantly running one program uploaded to it. Another approach was 
+                                    discussed to utilize the database and automate the sensor readings instead.
                                 </p>
                             </div>
                         </div>
@@ -272,38 +274,133 @@
 
                     <section id="April">
                         <div class="journal-entry">
-                            <p class="date"><em>Date</em></p>
+                            <p class="date"><em>Week 11: 03/04/2020</em></p>
                             <div class="note">
-                                <p>Title</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                    Excepteur
-                                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                                    anim id
-                                    est laborum.</p>
+                                <p>More Calibration</p>
+                                <p>Calibration of the soil moisture sensor was done but I encounter problems when reading from the pH sensor. I got some buffer solution
+                                    to test the pH sensor with but then realized the readings leaned to the more acidic side. My mom who is familiar with pH testing and 
+                                    similar scientific instructments suggested that it was due to the storage solution it was packaged with. The 3 point calibration process
+                                    was done using buffer solutions of pH 4,7 and 10 but the pH sensor failed to calibrate. I left the pH probe in the 7 pH solution
+                                    for a while hoping to train the probe to get accurate readings. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="journal-entry">
+                            <p class="date"><em>Week 12: 10/04/2020</em></p>
+                            <div class="note">
+                                <p>Even more calibration!</p>
+                                <p>Several attempts to calibrate the pH sensor using the 3 point calibration system was done but to no avail. A stay-at-home 
+                                    order is now in effect and persons who are not essential workers are warned against coming out from their homes and gathering 
+                                    with more than 5 people. Group members cannot meet to assemble the project as Zane has the hydroponic setup which 
+                                    includes the pump while I have all the rest of parts for the Embedded System. The code for the embedded system can still be developed 
+                                    and Inzamam suggested I used something in place of the pump in the physical setup as the code to activate the pump will be the same.
+                                    I decided I would use an LED in its place so it would light up to represent the pump turning on.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="journal-entry">
+                            <p class="date"><em>Week 13: 17/04/2020</em></p>
+                            <div class="note">
+                                <p>Design physical setup of Embedded System</p>
+                                <p>The way the hardware components will all be connected was thought through and designed. Research into how to operate 
+                                    the pump using the code was done with specific search using a relay module as this implementation was hinted to us by 
+                                    a friend. Wrote code to send the soil moisture reading to a specific collection in the database using the collection ID.
+                                    Also started to look into how to run multiple threads on the Arduino, turns out you cant! But you can implement something
+                                    that resembles mutlithreading called protothreading.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="journal-entry">
+                            <p class="date"><em>Week 14: 24/04/2020</em></p>
+                            <div class="note">
+                                <p>AVRDUDE</p>
+                                <p> After being extremely frustrated the previous day, doing research into how to send the date from the RP3 to the arduino to set the clock, 
+                                    at 5am I got it thankfully. <br>
+                                    The research indicated and displayed sample code using an alternative language with its own IDE known as 'Processing' to wait for a response 
+                                    from the arduino to send the date. After much frustration thinking I hit a wall, I sat down and walked through the code, which also gave a hint 
+                                    how to send the utc time format using linux which is the pi's base. I wrote a python script to mimic what the processing script was doing in much 
+                                    simplier terms and got it to work, now I can use that to check the time and run the sensors at particular times throughout the day. Thank God! 
+                                    <br>
+                                    Then while developing code and trying to achieve the protothreading using sample code so that I can use the concept to take readings from 
+                                    both the pH and turbidity sensors, I kept getting these errors with avrdude at the prefix like avrdude: programmer not working or avrdude: attempt 5 in 10 ..... 
+                                    These errors were preventing new code from being uploaded to the Arduino. Ofcourse I researched these errors and tried most of 
+                                    what was suggested,even pressing the reset button (which is what they said to do) on the board several times but nothing is working right now
+                                    so I'm going to give the Arduino a little break.
+                                </p>
                             </div>
                         </div>
                     </section>
 
                     <section id="May">
                         <div class="journal-entry">
-                            <p class="date"><em>Date</em></p>
+                            <p class="date"><em>Week 15: 1/05/2020</em></p>
                             <div class="note">
-                                <p>Title</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                    Excepteur
-                                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                                    anim id
-                                    est laborum.</p>
+                                <p>The nightmare of querying the firebase database</p>
+                                <p>Well........boyyyyyyyyy. What I thought would be my one of the simpliest jobs turned out to be one of the hardest. 
+                                   Essentially, for the pump to activate, the python script checks the database for the most recent soil moisture reading, 
+                                   i.e, check if the soil is wet or not as the soil moisture sensor takes digital signals. Getting the specific document 
+                                   from the moisture collection within the users collection posed a great problem. All in all, when I started actually 
+                                   figuring out what was happening, it went along the lines of the following because I cannot remember all the other things 
+                                   I was trying and failing at. Sigh. Eventually I realized that I have been obtaining a generator object when running the query, 
+                                   to which this was completely new to me so I had to research it a bit. I dont exactly know why it pulled a generator object or 
+                                   the pulled data stored in a generator obtain especially when the query only returned one document (which I wanted to happen and 
+                                   I iterated through the generator to make sure). From that I was able to pull what I wanted and finally move past this. Thank God.
+                                   <br>
+                                    I also solved the AVR problems occurring on the Arduino and was able to complete the code to take readings from 
+                                    the ph and turbidity sensor using the concept of protothreading which turned out to be quite simple. <br>
+                                    Having little background in physics, learning how to use the relay module and how to setup the wiring so that it circuit is normally open
+                                    was quite fun as it was not something I had to practice before. It is quite easy so it was no accomplishment but enjoyable
+                                    none the less understanding the role electricity plays in the hardware and following its flow to design the physical structure
+                                    the embedded system <br>
+                                    While Zane encountered problems hosting the web application, I was exploring the option of developing an API which will be 
+                                    used by the python scripts on the Embedded System to get the userID of the current user logged in so that the code would
+                                    update the specific user collection. I have not been able to completely implement this and has run into some problems. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="journal-entry">
+                            <p class="date"><em>Week 16: 08/05/2020</em></p>
+                            <div class="note">
+                                <p>So close!</p>
+                                <p>With the project deadline approaching quickly on the 11th, assignments now finishing for other courses and the API still not completed as I was encountering problems to post with
+                                    the way the react app was built, I began to be a little concerned. Upon doing further research, I discovered that the API will still require 
+                                    a database to keep the refresh tokens which would be used to get the user's ID to be sent to the embedded system when it make the API call.
+                                    Since both the embedded system and the web app was already connected to a shared database, I decided to create a current user collection
+                                    in the db which the web app will populate with the user ID that will be extracted from the user token it receives when the user is authenticated.
+                                    Thankfully, I already knew how to query the database using python so I easily modified all the code scripts to retrieve most recently added
+                                    user ID from the current user collection which I populated through my local copy of the web app. When I tested and ensured this approach worked
+                                    to send the data to the specific user collection who is logged into the system, I informed Zane and we made the necessary changes to the web app
+                                    in the code repo. <br>
+                                    All scripts now final I scheduled the python scripts to be ran at particular times using cron <br>
+                                    Now to tackle the final documentation, review previous documentation as design changes as been made as implementation was being 
+                                    carried out and the final video presentation. Thankfully we got a 4 day extension so the project is now due on the 15th. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="journal-entry">
+                            <p class="date"><em>Week 17: </em></p>
+                            <div class="note">
+                                <p>Last Lap, Lewwe go!</p>
+                                <p>
+                                    While neating up code and running final tests before uploading to the github, I thought of a more efficent
+                                    way to activate the pump than querying the user's collection for the latest soil moisture value. Before I was 
+                                    attempting to keep the different functions separate from each other and I'm not sure when I didn't do this before
+                                    but converted the original script which activated the pump to a module to be imported by the soil moisture script 
+                                    and will only run when the soil moisture reading is low. I am sure there was a reason I decided to do it the way I did
+                                    before but all that matters now is that I fixed it. 
+                                    <br>
+                                    Documentation, my least favourite part. This week was filled and focused around it. The group spent many hours on call,
+                                    working together and helping out document lead Caro out to finish these documents and have it reflect our project in the 
+                                    best we can. Zane also gave us the bad news that his word press will expire but as usual he already had a backup website ready
+                                    for us to put our journal entries in. Its a good thing I kept my personal noteworthy points on my trello board! 
+                                    <br>
+                                    This project has been challenging to us Big Twigs especially because it did not particularly turn out like we wanted but it was a great 
+                                    learning experience. Alot of hardwork was done and hours were spent trying to overcome our limitations and setbacks, particularly in light of 
+                                    unique circumstances presented due to the COVID-19 pandemic, but most importantly, knowledge was gained and experienced was acquired. 
+                                    I have not given up on embedded systems and I do plan on purchasing my own Raspberry Pi and working on personal projects in the future. 
+                                    <br>
+                                    
+                                </p>
                             </div>
                         </div>
                     </section>
