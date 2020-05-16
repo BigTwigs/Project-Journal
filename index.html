@@ -6,14 +6,16 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script defer src="theme.js"></script>
     </head>
     <body>
         <header>
-            <nav class="navbar">
-                <ul class="navbar-nav">
+            <nav class="navigation">
+                <ul class="navigation-nav">
                     <li class="logo">
-                        <a href="./index.html" class="nav-link">
+                        <a href="./index.html" class="navigation-link">
                             <span class="link-text logo-text">Big Twigs</span>
                             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
@@ -29,8 +31,8 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="navigation-item">
+                        <a href="./Carolyne.html" class="navigation-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cat" role="img"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cat fa-w-16 fa-9x">
                                 <g class="fa-group">
@@ -46,8 +48,8 @@
                         </a>
                     </li>
                     
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="navigation-item">
+                        <a href="./Zane.html" class="navigation-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="alien-monster" role="img"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
                                 class="svg-inline--fa fa-alien-monster fa-w-18 fa-9x">
@@ -62,8 +64,8 @@
                         </a>
                     </li>
                     
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="navigation-item">
+                        <a href="./Steffi.html" class="navigation-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-shuttle" role="img"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
                                 class="svg-inline--fa fa-space-shuttle fa-w-20 fa-5x">
@@ -80,8 +82,8 @@
                         </a>
                     </li>
                     
-                    <li class="nav-item" id="themeButton">
-                        <a href="#" class="nav-link">
+                    <li class="navigation-item" id="themeButton">
+                        <a href="#" class="navigation-link">
                             <svg class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad"
                                 data-icon="moon-stars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                 class="svg-inline--fa fa-moon-stars fa-w-16 fa-7x">
@@ -124,49 +126,105 @@
             </nav>
         </header>
         <main>
-            <h1>Tech Bubble is Bursting</h1>
+            <h1 class="title">PiFarm Project Blog</h1>
+            <section id="project-content" class="container-fluid">
+                <div class="row">
+                    <div style="padding-bottom: 2rem;" class="img">
+                        <img class="pifarm-logo" src="./Pifarm.png" alt="PiFarm Logo">
+                    </div>
+                    <div class="detail">
+                        <p>PiFarm is a web application developed in React.js and Firebase which is coupled to an embedded system consisting
+                            of a Raspberry Pi, an Arduino and several sensor components. The sensor components included in the development of PiFarm
+                            were the pH sensor, soil moisture sensor and turbidity sensor. Each of these sensors would function to collect data from a functional drip to
+                            waste hydroponic system and send this data to the Raspberry Pi and Arduino components. These components would then in turn send this 
+                            information to the Firebase Firestore which would then be sent a request from the web application to access this data.
+                            This data would then be rendered on the web application in real time, allowing a user to see the current status of their system on any device,
+                            even when they are away from their system.
+                        </p>
+                    </div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
+                </div>
+                
+            </section>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <section class="container-fluid">
+                <h2 class="title">The Big Twigs</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Steffi Maharaj</h2>
+                        <p>Project Lead</p>
+                        <p>816007800</p>
+                    </div>
 
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+                    <div class="col-md-4">
+                        <h2>Carolyne Samm</h2>
+                        <p>Documenter Lead</p>
+                    </div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="col-md-4">
+                        <h2>Zane Mohammed</h2>
+                        <p>Development Lead</p>
+                    </div>
+                </div>
+            </section>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <section id="links">
+                <div>
+                    <!-- <h2 class="title">Project Links</h2> -->
+                    <div class="container-fluid">
+                        <ul class="link-holder row">
+                            <div class="col-md-4">
+                                <li>
+                                    <a class="link"
+                                        href="https://coggle.it/diagram/XhYFCK6K4mqi9SLL/t/big-twig-farms/3ee45f0d32ed0598ff80bd04dc80a37f11edadcf7a5647eb3cf10721d288785b">
+                                        Coggle Diagram
+                                    </a>
+                                    <p>Diagram showing the initial planning stage of the project</p>
+                                </li>
+                                <li>
+                                    <a class="link"
+                                        href="https://drive.google.com/drive/folders/1gqUPCpJ-CIQ3tSfkunOpoXyb9Jb-i3oO">Google
+                                        Drive</a>
+                                    <p>Drive link to final all documentation for the project</p>
+                                </li>
+                                
+                            </div>
+                            <div class="col-md-4">
+                                <li>
+                                    <a class="link" href="#">Embedded System Github Repo</a>
+                                    <p>Repository containing all code for sensor components</p>
+                                </li>
+                                <li>
+                                    <a class="link" href="https://github.com/BigTwigs/PiFarm">Web Application Github
+                                        Repo</a>
+                                    <p>Repository containing all code for the web application</p>
+                                </li>
+                                
+                            </div>
+                            <div class="col-md-4">
+                                <li>
+                                    <a class="link" href="https://firebase.google.com/">Firebase Setup</a>
+                                    <p>Email:bigtwigfyp@gmail.com , Password:hellobigtwig</p>
+                                </li>
+                                <li>
+                                    <a class="link" href="#">Video Presentation</a>
+                                    <p>Final presentation on the project by the team</p>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
     </body>
 </html>
